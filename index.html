@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторна 1</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Лабораторна 1 - Антюхов Ігор</h1>
+
+    <h2>
+      Виконати операцію "перетин" і знайти бінарне відношення: a = {(a, b) | a ∈
+      A & b ∈ B & a < b}
+    </h2>
+
+    <p>Введіть елементи множин A і B, розділених комами без пробілів</p>
+
+    <form id="form">
+      <div>
+        <label for="a">Множина А: </label>
+        <input type="text" id="a" name="a" required />
+      </div>
+
+      <div>
+        <label for="a">Множина B: </label>
+        <input type="text" id="b" name="b" required />
+      </div>
+
+      <button type="submit">Виконати операції</button>
+    </form>
+
+    <p>Результат операції:</p>
+    <p id="operation"></p>
+
+    <p>Бінарне відношення:</p>
+    <table id="binaryRelation"></table>
+  </body>
+</html>
