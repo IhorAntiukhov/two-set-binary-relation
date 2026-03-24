@@ -1,11 +1,11 @@
-const form = document.getElementById("form");
-const operation = document.getElementById("operation");
-const table = document.getElementById("binaryRelation");
+const formElement = document.getElementById("form");
+const operationTextElement = document.getElementById("operation");
+const tableElement = document.getElementById("binaryRelation");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const formData = new FormData(form);
+  const formData = new FormData(formElement);
 
   const setA = formData
     .get("a")
@@ -40,7 +40,7 @@ form.addEventListener("submit", (event) => {
     if (valuesMap.get(element) === true) setC.push(element);
   });
 
-  operation.textContent = setC.join(", ");
+  operationTextElement.textContent = setC.join(", ");
 
   const binaryRelation = [];
 
@@ -55,7 +55,7 @@ form.addEventListener("submit", (event) => {
     }
   }
 
-  table.innerHTML = `
+  tableElement.innerHTML = `
   <tbody>
 ${binaryRelation
   .map(
